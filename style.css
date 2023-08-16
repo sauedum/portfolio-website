@@ -87,3 +87,28 @@ header {
   border-radius: var(--border-radius);
   box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.5);
 }
+
+
+/* Skills */
+#skills {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.container-skills {
+  display: flex;
+  align-items: center;
+}
+
+.container-skill {
+  margin-right: 2rem;
+}
+
+.container-skill figcaption {
+  text-align: center;
+}
+
+.container-skill img {
+  width: 80px;
+  margin: 0.5rem 0;
+}
