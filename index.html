@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./projectSlide.css">
+    <script src="https://kit.fontawesome.com/95e8224fff.js" crossorigin="anonymous"></script>
   </head>
   <body>
     
@@ -35,7 +37,7 @@
               with hopes of making a career change.
             </p>
             <p>
-              I also enjoy spending my free time with snowboarding, hiking, movies/tvshows and videogames.
+              I also enjoy spending my free time with snowboarding, hiking, videogames, movies and tvshows.
             </p>
           </div>
           <div class="container-home-image">
@@ -50,31 +52,38 @@
         <div class="container-skills">
           <figure class="container-skill">
             <figcaption>HTML</figcaption>
-            <img src="./Resources/images/icon-html.png" alt="html logo">
+            <i class="fa-brands fa-html5"></i>
+            <!--<img src="./Resources/images/icon-html.png" alt="html logo">-->
           </figure>
           <figure class="container-skill">
             <figcaption>CSS</figcaption>
-            <img src="./Resources/images/icon-css.png" alt="css logo">
+            <i class="fa-brands fa-css3-alt"></i>
+            <!--<img src="./Resources/images/icon-css.png" alt="css logo">-->
           </figure>
           <figure class="container-skill">
             <figcaption>Javascript</figcaption>
-            <img src="./Resources/images/icon-javascript.png" alt="javascript logo">
+            <i class="fa-brands fa-js"></i>
+            <!--<img src="./Resources/images/icon-javascript.png" alt="javascript logo">-->
           </figure>
           <figure class="container-skill">
             <figcaption>Nodejs</figcaption>
-            <img src="./Resources/images/icon-nodejs.png" alt="nodejs logo">
+            <i class="fa-brands fa-node"></i>
+            <!--<img src="./Resources/images/icon-nodejs.png" alt="nodejs logo">-->
           </figure>
           <figure class="container-skill">
             <figcaption>React</figcaption>
-            <img src="./Resources/images/icon-react.png" alt="react logo">
+            <i class="fa-brands fa-react"></i>
+            <!--<img src="./Resources/images/icon-react.png" alt="react logo">-->
           </figure>
           <figure class="container-skill">
             <figcaption>Git</figcaption>
-            <img src="./Resources/images/icon-git.png" alt="git logo">
+            <i class="fa-brands fa-git"></i>
+            <!--<img src="./Resources/images/icon-git.png" alt="git logo">-->
           </figure>
           <figure class="container-skill">
             <figcaption>Github</figcaption>
-            <img src="./Resources/images/icon-github.png" alt="github logo">
+            <i class="fa-brands fa-github"></i>
+            <!--<img src="./Resources/images/icon-github.png" alt="github logo">-->
           </figure>
         </div>
       </section>
@@ -82,14 +91,87 @@
       <!-- Projects -->
       <section id="projects">
         <h2>Projects</h2>
+
+        <!-- Image slider for projects -->
         <div class="container-projects">
 
+          <!-- First set of images for slider -->
+          <div class="projectSlides">
+            <div class="container-project">
+              <h4>Fictional Club Website</h4>
+              <img src="./Resources/images/project-clubwebsite.png" alt="">
+              <!-- Hover info -->
+              <div class="container-project-hover">
+                <p>Simple sample website</p>
+                <div class="hover-skills">
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <a class="hover-link" href="https://github.com/sauedum?tab=repositories" target="_blank">View on GitHub</a>
+              </div>
+            </div>
+            <div class="container-project">
+              <h4>Number Guesser</h4>
+              <img src="./Resources/images/project-numGuesser.png" alt="">
+              <!-- Hover info -->
+              <div class="container-project-hover">
+                <p>Number guesser game</p>
+                <div class="hover-skills">
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <a class="hover-link" href="https://github.com/sauedum?tab=repositories" target="_blank">View on GitHub</a>
+              </div>
+            </div>
+            <div class="container-project">
+              <h4>Creditcard Checker</h4>
+              <img src="./Resources/images/project-ccChecker.png" alt="">
+              <!-- Hover info -->
+              <div class="container-project-hover">
+                <p>Script to check for false creditcards</p>
+                <div class="hover-skills">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <a class="hover-link" href="https://github.com/sauedum?tab=repositories" target="_blank">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second set of images for slider -->
+          <div class="projectSlides">
+            <div class="container-project">
+              <h4>Mixed Messages</h4>
+              <img src="./Resources/images/project-mixedmsg.png" alt="">
+              <!-- Hover info -->
+              <div class="container-project-hover">
+                <p>Script to make a sentence based on random variables</p>
+                <div class="hover-skills">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <a class="hover-link" href="https://github.com/sauedum/Portfolio-Project---JS-Mixed-Messages" target="_blank">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous and Next buttons -->
+          <a class="projects-prev" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="projects-next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="container-projects-dot">
+          <span class="projects-dot" onclick="currentSlide(1)"></span>
+          <span class="projects-dot" onclick="currentSlide(2)"></span>
         </div>
       </section>
 
       <!-- Contact -->
       <section id="contact">
-
+        <h2>Contact</h2>
+        <div class="container-contact-icons">
+          <a href="mailto: contact@bornnerds.com"><i class="fa-regular fa-envelope"></i></a>          
+          <a href="https://www.linkedin.com/in/kenneth-hag%C3%A5s-2a64b39b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/sauedum" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
       </section>
     </main>
 
@@ -98,4 +180,5 @@
 
     </footer>
   </body>
+  <script src="./script.js"></script>
 </html>

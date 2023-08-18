@@ -17,7 +17,7 @@ body {
   --spacing-3: 16px;
   --spacing-4: 24px;
 
-  --border-radius: 2rem;
+  --border-radius: 1rem;
 
   --max-width: 1024px;
 
@@ -33,6 +33,11 @@ h1 {
 h2 {
   font-size: 2.5rem;
   margin: 4rem 0;
+}
+
+section {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 
@@ -65,8 +70,6 @@ header {
 
 /* Home */
 .container-home {
-  max-width: var(--max-width);
-  margin: 0 auto;
   display: flex;
   align-items: center;
 }
@@ -90,25 +93,76 @@ header {
 
 
 /* Skills */
-#skills {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
 .container-skills {
   display: flex;
   align-items: center;
 }
 
 .container-skill {
+  text-align: center;
   margin-right: 2rem;
+  font-size: 4rem;
+  color: teal;
 }
 
 .container-skill figcaption {
-  text-align: center;
+  font-size: 1rem;
+  color: black;
 }
 
 .container-skill img {
   width: 80px;
   margin: 0.5rem 0;
+}
+
+
+/* Projects */
+.container-project-hover {
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.container-project-hover p {
+  position: absolute;
+  width: 100%;
+  top: 15%;
+}
+
+.hover-skills {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  font-size: 2.45rem;
+}
+
+.hover-link {
+  position: absolute;
+  top: 82.3%;
+  width: 100%;
+  text-decoration: none;
+  padding: 1rem 0;
+  background-color: teal;
+  display: block;
+  color: black;
+}
+
+.hover-link:hover {
+  background-color: rgb(73, 160, 160);
+}
+
+.container-project:hover img{
+  opacity: 0.1;
+}
+
+.container-project:hover .container-project-hover {
+  opacity: 1;
+}
+
+
+/* Contact */
+.container-contact-icons a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+  margin-right: 1rem;
 }
