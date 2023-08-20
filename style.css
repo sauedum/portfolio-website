@@ -26,6 +26,10 @@ body {
   --background-color-border: rgb(130, 177, 198);
 }
 
+main {
+  padding: 0 1rem;
+}
+
 h1 {
   font-size: 2.4rem;
 }
@@ -96,6 +100,7 @@ header {
 .container-skills {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .container-skill {
@@ -118,7 +123,7 @@ header {
 
 /* Projects */
 .container-project-hover {
-  opacity: 0;
+  display: none;
   transition: 0.2s ease;
 }
 
@@ -126,18 +131,21 @@ header {
   position: absolute;
   width: 100%;
   top: 15%;
+  left: 0;
 }
 
 .hover-skills {
   position: absolute;
   width: 100%;
   top: 45%;
+  left: 0;
   font-size: 2.45rem;
 }
 
 .hover-link {
   position: absolute;
-  top: 82.3%;
+  bottom: 0;
+  left: 0;
   width: 100%;
   text-decoration: none;
   padding: 1rem 0;
@@ -150,12 +158,16 @@ header {
   background-color: rgb(73, 160, 160);
 }
 
+.container-project:hover {
+  background: none;
+}
+
 .container-project:hover img{
   opacity: 0.1;
 }
 
 .container-project:hover .container-project-hover {
-  opacity: 1;
+  display: block;
 }
 
 
@@ -165,4 +177,9 @@ header {
   text-decoration: none;
   color: black;
   margin-right: 1rem;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  
 }
