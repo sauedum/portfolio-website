@@ -34,13 +34,13 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  margin: 4rem 0;
+  margin-bottom: 4rem;
   color: var(--text-color-primary);
 }
 
 section {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 
 
@@ -113,13 +113,8 @@ header {
   color: var(--text-color-secondary);
 }
 
-.container-home-image {
-  margin-top: 4rem;
-}
-
 .container-home-image img {
-  width: 300px;
-  float: right;
+  width: 250px;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.5);
 }
@@ -229,6 +224,7 @@ footer {
 
 
 @media only screen and (max-width: 1024px) {
+  /* Header */
   .container-header {
     flex-direction: column;
   }
@@ -241,5 +237,13 @@ footer {
   }
   .nav-item a {
     margin-bottom: 0;
+  }
+
+  /* About me */
+  .container-home {
+    flex-direction: column;
+  }
+  .container-home-text p {
+    width: 100%;
   }
 }
