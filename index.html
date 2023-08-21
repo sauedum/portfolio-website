@@ -13,9 +13,14 @@
     <!-- Header -->
     <header>
       <div class="container-header">
-        <h1>Kenneth Hagås</h1>
+        <div class="header-title-button">
+          <h1>Kenneth Hagås</h1>
+          <button id="nav-button" type="button" onclick="navButton()" class="nav-button-deactive">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
         <nav>
-          <ul class="nav-bar">
+          <ul id="nav-bar">
             <li class="nav-item"><a href="#home">Home</a></li>
             <li class="nav-item"><a href="#skills">Skills</a></li>
             <li class="nav-item"><a href="#projects">Projects</a></li>
@@ -227,8 +232,12 @@
 
     <!-- Footer -->
     <footer>
-
+      <p>
+        <i class="fa-regular fa-face-smile"></i>
+        Kenneth Hagås
+      </p>
     </footer>
   </body>
+  <script src="./test.js"></script>
   <script src="./script.js"></script>
 </html>

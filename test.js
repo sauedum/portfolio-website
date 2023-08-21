@@ -1,19 +1,13 @@
-const slide1 = [1, 2, 3];
-const slide2 = [4, 5, 6];
-const slides = [slide1, slide2];
-
-const convertSlides = arr => {
-    let newSlide = [];
-    let newIndex = 0;
-    for (let i = 0; i < arr.length; i++ ) {
-        for (let x = 0; x < arr[i].length; x++) {
-            newSlide[newIndex] = arr[i][x];
-            newIndex++
-        }
+const navButton = () => {
+    const button = document.getElementById("nav-button");
+    const navBar = document.getElementById("nav-bar");
+    
+    if (button.className === "nav-button-active") {
+        button.className = "nav-button-deactive";
+        navBar.style.display = "none"
     }
-    return newSlide;
+    else {
+        button.className = "nav-button-active";
+        navBar.style.display = "block"
+    }
 }
-
-
-console.log(convertSlides(slides)[0]);
-console.log(slides[0]);

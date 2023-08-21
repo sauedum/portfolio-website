@@ -8,6 +8,9 @@ const isDesktop = window.matchMedia("(max-width: 1024px)");
 const checkResize = e => {
     /* Mobile view */
     if (e.matches) {
+        /* Hide navigation bar when entering mobile view */
+        document.getElementById("nav-bar").style.display = "none";
+        
         let desktopSlides = document.getElementsByClassName("projectSlides");
         slides = document.getElementsByClassName("container-project");
         dots = document.getElementsByClassName("projects-dot-mobile");
@@ -22,6 +25,10 @@ const checkResize = e => {
     }
     /* Desktop view */
     else {
+        /* Reset navigation bar and button when entering desktop view */
+        document.getElementById("nav-bar").style.display = "flex";
+        document.getElementById("nav-button").className = "nav-button-deactive"
+
         let mobileSlides = document.getElementsByClassName("container-project");
         slides = document.getElementsByClassName("projectSlides");
         dots = document.getElementsByClassName("projects-dot-desktop");

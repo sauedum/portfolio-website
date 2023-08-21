@@ -12,31 +12,30 @@ body {
 }
 
 :root {
-  --spacing-1: 8px;
-  --spacing-2: 12px;
-  --spacing-3: 16px;
-  --spacing-4: 24px;
-
-  --border-radius: 1rem;
-
   --max-width: 1024px;
 
   --background-color-header: rgb(206, 232, 243);
   --background-color-main: rgb(182, 223, 241);
   --background-color-border: rgb(130, 177, 198);
+
+  --text-color-primary: rgb(0, 128, 128);
+  --text-color-secondary: rgb(17, 69, 92);
+  --skills-color: rgb(63, 103, 123);
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 h1 {
   font-size: 2.4rem;
+  color: var(--text-color-secondary);
 }
 
 h2 {
   font-size: 2.5rem;
   margin: 4rem 0;
+  color: var(--text-color-primary);
 }
 
 section {
@@ -56,21 +55,50 @@ header {
   align-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   justify-content: space-between;
 }
 
-.nav-bar {
+.header-title-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#nav-button {
+  display: none;
+  font-size: 1.3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.4rem;
+  color: var(--text-color-secondary);
+}
+
+.nav-button-active {
+  background-color: rgba(130, 177, 198, 0.7);
+}
+
+#nav-bar {
   display: flex;
   list-style-type: none;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.nav-item {
+  margin: 0.8rem 0;
 }
 
 .nav-item a {
   text-decoration: none;
-  margin-left: 0.5rem;
-  color: black;
+  margin-left: 1.5rem;
+  color: var(--text-color-primary);
 }
 
+.nav-item a:hover {
+  border-bottom: solid 1px rgb(22, 161, 161);
+  color: rgb(22, 161, 161);
+}
 
 /* Home */
 .container-home {
@@ -82,6 +110,7 @@ header {
   width: 80%;
   font-size: 1.3rem;
   margin: 2rem 0;
+  color: var(--text-color-secondary);
 }
 
 .container-home-image {
@@ -91,7 +120,7 @@ header {
 .container-home-image img {
   width: 300px;
   float: right;
-  border-radius: var(--border-radius);
+  border-radius: 1rem;
   box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.5);
 }
 
@@ -107,12 +136,12 @@ header {
   text-align: center;
   margin-right: 2rem;
   font-size: 4rem;
-  color: teal;
+  color: var(--skills-color);
 }
 
 .container-skill figcaption {
   font-size: 1rem;
-  color: black;
+  color: var(--text-color-secondary);
 }
 
 .container-skill img {
@@ -132,6 +161,7 @@ header {
   width: 100%;
   top: 15%;
   left: 0;
+  color: var(--text-color-secondary);
 }
 
 .hover-skills {
@@ -140,6 +170,7 @@ header {
   top: 45%;
   left: 0;
   font-size: 2.45rem;
+  color: var(--skills-color);
 }
 
 .hover-link {
@@ -175,11 +206,40 @@ header {
 .container-contact-icons a {
   font-size: 2.5rem;
   text-decoration: none;
-  color: black;
+  color: var(--text-color-secondary);
   margin-right: 1rem;
+}
+
+.container-contact-icons a:hover {
+  color: var(--skills-color);
+}
+
+.container-contact-icons {
+  margin-bottom: 4rem;
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--text-color-secondary);
+  color: var(--background-color-header);
+  padding: 1rem 0;
+  text-align: center;
 }
 
 
 @media only screen and (max-width: 1024px) {
-  
+  .container-header {
+    flex-direction: column;
+  }
+  #nav-button {
+    display: block;
+  }
+  #nav-bar {
+    display: none;
+    margin-bottom: -1.2rem;
+  }
+  .nav-item a {
+    margin-bottom: 0;
+  }
 }
