@@ -21,6 +21,10 @@ body {
   --text-color-primary: rgb(0, 128, 128);
   --text-color-secondary: rgb(17, 69, 92);
   --skills-color: rgb(63, 103, 123);
+
+  --font-headers-primary: 'Roboto', sans-serif;
+  --font-headers-secondary: 'Poppins', sans-serif;
+  --font-text-primary: 'Open Sans', sans-serif;
 }
 
 main {
@@ -28,14 +32,21 @@ main {
 }
 
 h1 {
+  font-family: var(--font-headers-primary);
   font-size: 2.4rem;
   color: var(--text-color-secondary);
 }
 
 h2 {
+  font-family: var(--font-headers-primary);
   font-size: 2.5rem;
   margin-bottom: 4rem;
   color: var(--text-color-primary);
+}
+
+p {
+  font-family: var(--font-text-primary);
+  line-height: 2.5rem;
 }
 
 section {
@@ -62,6 +73,7 @@ header {
 .header-title-button {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
@@ -90,6 +102,7 @@ header {
 }
 
 .nav-item a {
+  font-family: var(--font-headers-secondary);
   text-decoration: none;
   margin-left: 1.5rem;
   color: var(--text-color-primary);
@@ -135,6 +148,7 @@ header {
 }
 
 .container-skill figcaption {
+  font-family: var(--font-headers-secondary);
   font-size: 1rem;
   color: var(--text-color-secondary);
 }
@@ -169,6 +183,7 @@ header {
 }
 
 .hover-link {
+  font-family: var(--font-headers-secondary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -246,5 +261,11 @@ footer {
   }
   .container-home-text p {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  h1 {
+    font-size: 2rem;
   }
 }
