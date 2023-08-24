@@ -46,7 +46,6 @@ h2 {
 
 p {
   font-family: var(--font-text-primary);
-  line-height: 2.5rem;
 }
 
 section {
@@ -122,6 +121,7 @@ header {
 .container-home-text p {
   width: 80%;
   font-size: 1.3rem;
+  line-height: 2.5rem;
   margin: 2rem 0;
   color: var(--text-color-secondary);
 }
@@ -166,6 +166,7 @@ header {
 }
 
 .container-project-hover p {
+  font-size: 1.1rem;
   position: absolute;
   width: 100%;
   top: 15%;
@@ -209,6 +210,34 @@ header {
 
 .container-project:hover .container-project-hover {
   display: block;
+}
+
+.container-info-button {
+  position: absolute;
+  display: none;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+}
+
+.info-button {
+  font-size: 3rem;
+  color: var(--text-color-secondary);
+}
+
+.info-button i {
+  background-color: var(--text-color-primary);
+  border-radius: 2rem;
+}
+
+.info-button-active {
+  color: rgba(130, 177, 198, 0.7);
+  bottom: 20%;
+}
+
+.info-button-active button{
+  color: rgba(130, 177, 198, 0.7);
 }
 
 
@@ -267,5 +296,11 @@ footer {
 @media only screen and (max-width: 390px) {
   h1 {
     font-size: 2rem;
+  }
+}
+
+@media (hover: none) {
+  .container-info-button {
+    display: flex;
   }
 }

@@ -114,3 +114,9 @@
     max-width: none;
   }
 }
+
+@media (hover: none) {
+  .container-project {
+    background-color: transparent;
+  }
+}
